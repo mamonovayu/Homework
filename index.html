@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First_form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/42fba9c3d5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <fieldset class="fieldset">
+        <legend>Feedback</legend>
+        <ul class="list">
+          <li>
+            <i class="fa-regular fa-user"></i>
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="user_name"
+              minlength="2"
+              maxlength="20"
+              required
+            />
+          </li>
+          <li>
+            <label for="age">Are you over 18?</label>
+            <input type="checkbox" id="age" name="age" />
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <label for="tel">Phone number:</label>
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              pattern="^\+7[1-9]{10}$"
+              required
+            />
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope"></i>
+            <label for="mail">Email:</label>
+            <input type="mail" name="email" id="mail" required />
+          </li>
+          <li>
+            <i class="fa-regular fa-comment"></i>
+            <label for="msg">Message:</label>
+            <textarea
+              name="user_message"
+              id="msg"
+              minlength="10"
+              maxlength="150"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </li>
+          <li>
+            <button type="submit">Send your Message</button>
+          </li>
+        </ul>
+      </fieldset>
+      <ul class="list">
+        <li>
+          <p>Choose the color you like best</p>
+          <div>
+            <input type="color" id="violet" name="violet" value="#EE82EE" />
+            <label for="violet">Violet</label>
+          </div>
+          <div>
+            <input
+              type="color"
+              id="blueviolet"
+              name="blueviolet"
+              value="#8A2BE2"
+            />
+            <label for="blueviolet">Blueviolet</label>
+          </div>
+        </li>
+        <li>
+          <label for="start">Start date:</label>
+          <input
+            type="date"
+            id="start"
+            name="trip start"
+            value="10-10-2023"
+            min="09-10-2023"
+            max="31-12-2023"
+          />
+        </li>
+        <li>
+          <label for="meeting-time">Choose a meeting time</label>
+          <input
+            type="datetime-local"
+            id="meeting-time"
+            name="meeting-time"
+            value="2023-10-09T19:00"
+            min="2023-10-09T00:00"
+            max="2023-12-31T23:59"
+          />
+          >
+        </li>
+        <li>
+          <label for="photo">Choose a photo:</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/png, image/jpeg"
+          />
+        </li>
+        <li>
+          <input
+            type="image"
+            id="image"
+            alt="button Click Here"
+            src="/image.jpg"
+            width="300"
+          />А
+        </li>
+        <li>
+          <label for="start-month"></label>
+          <input
+            type="month"
+            id="start-month"
+            name="start"
+            min="2023-10"
+            max="2023-12"
+            value="2023-10"
+          />
+        </li>
+        <li>
+          <label for="days">Number of days(1-31):</label>
+
+          <input type="number" id="days" name="days" min="1" max="31" />
+        </li>
+        <li>
+          <label for="pass">Password (6 characters minimum):</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="6"
+            maxlength="20"
+            required
+          />
+        </li>
+        <li>
+          <fieldset class="fieldset">
+            <legend>Select your gender:</legend>
+            <div>
+              <input type="radio" id="male" name="male" value="male" checked />
+              <label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="female" value="female" />
+              <label for="female">Female</label>
+            </div>
+          </fieldset>
+        </li>
+        <li>
+          <input type="range" id="volume" name="volume" min="0" max="100" />
+          <label for="volume">Volume</label>
+        </li>
+        <li>
+          <input type="reset" />
+        </li>
+        <li>
+          <input type="submit" />
+        </li>
+        <li>
+          <label for="message-search">Search message:</label>
+          <input type="search" id="message-search" name="search" />
+          <button>Search</button>
+        </li>
+        <li>
+          <label for="start-time">Start time:</label>
+          <input
+            type="time"
+            id="start-time"
+            name="start-time"
+            min="09:00"
+            max="21:00"
+          />
+        </li>
+        <li>
+          <label for="url">Enter an https:// URL:</label>
+          <input
+            type="url"
+            name="url"
+            id="url"
+            placeholder="https://example.com"
+            pattern="https://.*"
+            size="30"
+            required
+          />
+        </li>
+        <li>
+          <input
+            type="week"
+            name="week"
+            id="week"
+            min="2023-W40"
+            max="2023-W52"
+            required
+          />
+        </li>
+        <li>
+          <video controls autoplay loop width="300">
+            <source src="/321.mp4" type="video/mp4" />
+          </video>
+        </li>
+        <li>
+          <audio controls autoplay loop src="/123.mp3"></audio>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
